@@ -6,7 +6,7 @@ return (
     <div>
     <h2>ItemListContainer</h2>
     <hr/>
-    <h3>{props.greeting }</h3>
+    <h3>{props.greeting}</h3>
     </div>
 )
 }
