@@ -1,9 +1,12 @@
 import React from 'react'
+import { BiCart } from "react-icons/bi";
+
 
 export const CartWidget = () => {
     return (
         <>
-            <b>Carrito</b>
+            <BiCart/> 
+            <b>3</b>
         </>
     )
 }
