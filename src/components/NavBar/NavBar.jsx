@@ -4,11 +4,11 @@ import "./NavBar.css"
 
 export const NavBar = () => {
     return (
-        <div>
-        <p>Logo Ecommerce</p>
-        <p>Enlace1</p>
-        <p>Enlace2</p>
-        <p>Enlace3</p>
+        <div className="header">
+        <p>Logo Ecommerce GT</p>
+        <p>Frutas y Verduras</p>
+        <p>Carniceria</p>
+        <p>Almacen</p>
         <CartWidget/>
         </div>
     )
