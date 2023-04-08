@@ -1,0 +1,7 @@
+div.spinner{
+    rotate: 180;
+    transition: 2000ms;
+    height: 200px;
+    height: 200px;
+    background-color: rebeccapurple;
+}

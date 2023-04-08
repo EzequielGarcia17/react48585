@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import "./ItemCount.css"
-import { toBeDisabled } from '@testing-library/jest-dom/dist/matchers'
-import { isDisabled } from '@testing-library/user-event/dist/utils'
 
 export const ItemCount = () => {
     const [counter, setCounter] = useState(0)

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { pedirProductos } from '../../helpers/pedirProductos'
-import { ItemList } from '../ItemList/ItemList';
+import { ItemList } from '../ItemList/ItemList'
+import { FaSpinner } from "react-icons/fa"
+import "./itemListContainer.css"
 
 export const ItemListContainer = (props) => {
     const [items, setItems] = useState ([])
@@ -26,7 +28,9 @@ return (
     <>
     {
         loading
-        ?<h2>Cargando...</h2>
+        ?<div className="spinner">
+        <FaSpinner/>
+        </div>
         :<ItemList productos={items}/>
     }
     </>
