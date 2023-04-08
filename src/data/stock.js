@@ -4,7 +4,7 @@ export const stock = [
         description: "Banana",
         origen: "Ecuador",
         price: 350,
-        image: "../1111836_banana_maca.jpg/",
+        image: "../../data/imgs/1/1111836_banana_maca.jpg/",
     },
 
     {
@@ -12,6 +12,14 @@ export const stock = [
         description: "Tomate",
         origen: "Argentina",
         price: 150,
-        image: "src/data/imgs/1/1111836_banana_maca.jpg",
+        image: "../imgs/2/31089 caqui.jpg",
+    },
+
+    {
+        id: 3,
+        description: "Tomate2",
+        origen: "Argentina",
+        price: 250,
+        image: "../data/imgs/2/31089 caqui.jpg",
     }
 ]

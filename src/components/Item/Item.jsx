@@ -5,7 +5,7 @@ import { ItemCount } from "../ItemCount/ItemCount";
 export const Item = ({id, description, origen, price, image}) => {
     return (
     <div>
-        <Card style={{ width: '100%' }}>
+        <Card style={{ width: '25em' }}>
             <Card.Img variant="top" src={image} />
             <Card.Body>
                 <Card.Title>{description}</Card.Title>
