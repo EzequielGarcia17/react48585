@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import "./ItemCount.css"
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 export const ItemCount = () => {
     const [counter, setCounter] = useState(0)
@@ -18,14 +20,15 @@ export const ItemCount = () => {
     }
 
 return (
-    <>
-    <h3>Contador: {counter}
-    </h3>
     <div>
-        <button onClick={sumar}>+</button>
-        <button onClick={restar}>-</button>
-        <button onClick={reset}>resetear</button>
+    <h3>Cantidad</h3>
+    <ButtonGroup aria-label="Basic example">
+        <Button variant="secondary" onClick={restar}>-</Button>
+        <Button variant="secondary">{counter}</Button>
+        <Button variant="secondary" onClick={sumar}>+</Button>
+        <Button variant="secondary" onClick={reset}>🔄</Button>
+    </ButtonGroup>
     </div>
-    </>
 )
 }
+

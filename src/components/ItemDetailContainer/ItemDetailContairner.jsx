@@ -1,32 +1,38 @@
 import React, {useEffect, useState} from "react";
 import { pedirProductos } from "../../helpers/pedirProductos";
 import { FaSpinner } from "react-icons/fa"
-import { ItemDetail } from "../ItemDetail/ItemDetail";
+import {ItemDetail} from '../ItemDetail/ItemDetail'
+import { useParams } from "react-router-dom";
 
-export const ItemDetailContainer = () =>{
+export const ItemDetailContainer = () => {
 
     const [item, setItem] = useState(null)
 
     const [loading, setLoading] = useState(false)
 
-    useEffect(()=>{
+    const {itemId} = useParams()
+
+    useEffect(() =>{
+
         setLoading(true)
         pedirProductos()
-        .then(res =>{
-            setItem(res)
-        })
-        .catch((error) => console.log(error))
-        .finally (() => {
-            setLoading(false)
-        } )
-    },[])
+            .then(res =>{
+                setItem( res.find( prod => prod.id === Number(itemId)))
+            })
+            .catch((error) => console.log(error))
+            .finally(() => {
+                setLoading(false)
+            })
+    },[itemId])
 
-    return(
-        <div>{
+
+return (
+    <section>
+        {
             loading
             ?<FaSpinner/>
-            :<ItemDetail productos={items}/>
+            :<ItemDetail {...item}/>
         }
-        </div>
-    )
+    </section>
+)
 }

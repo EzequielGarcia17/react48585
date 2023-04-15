@@ -1,24 +1,24 @@
 import React from "react"
+import "./Item.css"
 import {Card, Button } from 'react-bootstrap';
-import { ItemCount } from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
-export const Item = ({id, description, origen, price, image}) => {
+
+export const Item = ({id, name, origen, price, amount, image, category}) => {
     return (
     <div>
-        <Card style={{ width: '25em' }}>
+        <Card className="item" style={{ width: '25em' }}>
             <Card.Img variant="top" src={image} />
             <Card.Body>
-                <Card.Title>{description}</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-                </Card.Text>
+                <Card.Title>{name}</Card.Title>
                 <p>{origen}</p>
-                <p>{price}</p>
-                <Button variant="primary">Go somewhere</Button>
+                <p>Categoría: {category}</p>
+                <Card.Text>${price} {amount}</Card.Text>
+                <Link to={`/detail/${id}`}>
+                    <Button variant="primary">Ver más</Button>
+                </Link>
             </Card.Body>
         </Card>
-    <ItemCount/>
     </div>
 );
 }
