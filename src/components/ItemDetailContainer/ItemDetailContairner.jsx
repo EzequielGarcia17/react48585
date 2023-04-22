@@ -3,6 +3,7 @@ import { pedirProductos } from "../../helpers/pedirProductos";
 import { FaSpinner } from "react-icons/fa"
 import {ItemDetail} from '../ItemDetail/ItemDetail'
 import { useParams } from "react-router-dom";
+import "./ItemDetailContainer.css"
 
 export const ItemDetailContainer = () => {
 

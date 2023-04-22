@@ -26,7 +26,7 @@ function App() {
         <Route path='*' element={<Navigate to='/'/>} />
       </Routes>
     </Router>
-    <footer className="foot">FIN DE WEB</footer>
+    <footer className="foot">FIN DE LA APP</footer>
   </div>
   );
 }

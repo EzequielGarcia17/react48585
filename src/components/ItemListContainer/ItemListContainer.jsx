@@ -28,7 +28,7 @@ useEffect(() =>{
         }, [categoryId])
 
 return (
-    <>
+    <div className='productos'>
     {
         loading
         ?<div className="spinner">
@@ -36,7 +36,7 @@ return (
         </div>
         :<ItemList productos={items}/>
     }
-    </>
+    </div>
     )}
 
 
