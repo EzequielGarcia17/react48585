@@ -5,6 +5,7 @@ import { NavBar } from "./components/NavBar/NavBar";
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContairner';
 import "./App.css"
 
+
 import {
   BrowserRouter as Router,
   Routes,
