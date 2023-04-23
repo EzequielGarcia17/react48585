@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { pedirProductos } from '../../helpers/pedirProductos'
 import { FaSpinner } from "react-icons/fa"
-import "./ItemListContainer.css"
+import "./itemListContainer.css"
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom'
 
