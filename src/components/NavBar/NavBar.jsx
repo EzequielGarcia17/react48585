@@ -9,7 +9,7 @@ export const NavBar = () => {
         <div className="header">
             <Link className="link" to='/'>
                 <img className="freshi" src={logo} alt="Freshi Logo"/>
-            </Link>
+            </Link> 
             <Link className="link" to='/productos/Verduleria'>Verdulería</Link>
             <Link className="link" to='/productos/Carnes'>Carnes</Link>
             <Link className="link" to='/productos/Almacen'>Almacen</Link>

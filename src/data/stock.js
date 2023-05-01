@@ -8,6 +8,7 @@ export const stock = [
         price: 350,
         amount: "x kg",
         image: 'https://c.pxhere.com/photos/44/12/bananas_fruit_carbohydrates_sweet_yellow-1330126.jpg!d',
+        stock: 10,
     },
 
     {
@@ -19,6 +20,7 @@ export const stock = [
         price: 150,
         amount: "x kg",
         image: "https://c.pxhere.com/photos/36/68/tomatoes_agriculture_antioxidants_bunch_colorful_cooking_delicious_diet-1141373.jpg!d",
+        stock: 10,
     },
 
     {
@@ -30,6 +32,7 @@ export const stock = [
         price: 1.050,
         amount: "x kg",
         image: "https://carrefourar.vtexassets.com/arquivos/ids/204852-800-auto?v=637601375162500000&width=800&height=auto&aspect=true",
+        stock: 10,
     },
 
     {
@@ -41,6 +44,7 @@ export const stock = [
         price: 550,
         amount: "x 900ml",
         image: "https://carrefourar.vtexassets.com/arquivos/ids/263188-600-auto?v=638042211872630000&width=600&height=auto&aspect=true",
+        stock: 10,
     },
 
     {
@@ -52,6 +56,7 @@ export const stock = [
         price: 550,
         amount: "x 500gr",
         image: "https://carrefourar.vtexassets.com/arquivos/ids/171046-600-auto?v=637468537757230000&width=600&height=auto&aspect=true",
+        stock: 10,
     },
 
     {
@@ -63,5 +68,6 @@ export const stock = [
         price: 490,
         amount: "x kg",
         image: "https://c.pxhere.com/photos/c4/b1/chicken_broiler_grilled_chicken_poultry_raw_bio_frisch_barbecue-1167536.jpg!d",
+        stock: 10,
     },
 ]
