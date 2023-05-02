@@ -7,6 +7,7 @@ import { CartContext } from "../context/CartContext"
 import firebase from "firebase"
 import "firebase/firestore"
 import { getFirestore } from "../../firebase/config"
+import Swal from "sweetalert2"
 
 export const Checkout = () => {
 
@@ -44,8 +45,27 @@ const db = getFirestore()
 const ordenes = db.collection("ordenes")
 
 ordenes.add(orden)
-    .then ((res) =>{
-
+    .then((res) =>{
+        Swal.fire({
+            icon: 'success',
+            title: 'Compra finalizada con éxito',
+            text: 'Guarde su número de compra: ${}',
+            willClose: () =>{
+                vaciarCarrito()
+            }
+        })
+    })
+    .finally(()=>{
+        console.log("Operacion terminada con éxito")
+    })
+    carrito.forEach((item) =>{
+        const docRef = db.collection("productos").doc(item.id)
+        docRef.get()
+        .then((doc) =>{
+            docRef.update({
+                stock: doc.data().stock - item.counter
+            })
+        })
     })
 }
 
