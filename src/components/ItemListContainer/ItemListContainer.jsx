@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom'
 export const ItemListContainer = () => {
     const [items, setItems] = useState([])
 
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState()
 
     const {categoryId} = useParams()
 
