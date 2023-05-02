@@ -12,6 +12,7 @@ import {
   Route,
 } from 'react-router-dom'
 import { CartProvider } from './components/context/CartContext';
+import { Checkout } from './components/Checkout/Checkout';
 //import { UiProvider } from './components/context/UiContext';
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/detail/:itemId' element={<ItemDetailContainer/>}/>
           <Route path='*' element={<Navigate to='/'/>} />
           <Route path="/cart" element={<Cart/>} />
+          <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
       </Router>
       <footer className="foot">FIN DE LA APP</footer>

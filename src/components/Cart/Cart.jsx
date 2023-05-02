@@ -32,6 +32,7 @@ export const Cart = () => {
             <hr/>
             <p>PRECIO TOTAL ${precioTotal()}</p>
             <hr/>
+            <Link to="/checkout" class="btn btn-success">Finalizar Compra</Link>
             <Button className='btn btn-danger'onClick={vaciarCarrito}>vaciarCarrito</Button>
         </>
     }

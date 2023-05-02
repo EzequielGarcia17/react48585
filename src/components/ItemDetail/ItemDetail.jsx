@@ -4,6 +4,7 @@ import { Button, Card } from 'react-bootstrap';
 import { ItemCount } from '../ItemCount/ItemCount';
 import "./ItemDetail.css"
 import { CartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 export const ItemDetail = ({id, name, description, origen, price, amount, image, category, stock}) => {
 
@@ -39,6 +40,7 @@ const sumarAlCarrito = () => {
             <Card.Text  className="subt priceDet">${price} {amount}</Card.Text>
             <ItemCount max={stock} min="1" modify={setCounter} cantidad={counter}/>
             <Button className="compra ctaDet" onClick={sumarAlCarrito}>Agregar al carrito</Button>
+            <Link to="/cart">Ir al carrito</Link> 
             <Button onClick={volverAtras}>Volver</Button>
         </Card.Body>
     </Card>
