@@ -23,6 +23,7 @@ const sumarAlCarrito = () => {
         description,
         image,
         price,
+        amount,
         counter
     }
     addToCart(newItem)

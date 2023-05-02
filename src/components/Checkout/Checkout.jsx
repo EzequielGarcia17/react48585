@@ -2,8 +2,15 @@ import { useState } from "react"
 import React from "react"
 import "./Checkout.css"
 import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { CartContext } from "../context/CartContext"
+import firebase from "firebase"
+import "firebase/firestore"
+import { getFirestore } from "../../firebase/config"
 
 export const Checkout = () => {
+
+    const {carrito, precioTotal, vaciarCarrito} = useContext(CartContext)
 
     const [email, setEmail] = useState("")
 
@@ -19,7 +26,31 @@ export const Checkout = () => {
         console.log("Nombre:", nombre)
         console.log("Apellido:", apellido)
         console.log("Teléfono:", telefono)
-    }
+        
+        const orden = {
+    buyer: {
+        email,
+        nombre,
+        apellido,
+        telefono
+    },
+    item: carrito,
+    total_price: precioTotal(),
+    data: firebase.firestore.Timestamp.fromDate(new Date())
+}
+console.log(orden)
+const db = getFirestore()
+
+const ordenes = db.collection("ordenes")
+
+ordenes.add(orden)
+    .then ((res) =>{
+
+    })
+}
+
+
+
 
     return (
         <div className="checkout">
