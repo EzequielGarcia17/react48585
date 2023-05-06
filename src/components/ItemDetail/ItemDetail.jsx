@@ -5,7 +5,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import "./ItemDetail.css"
 import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
-
+import Swal from 'sweetalert2';
 export const ItemDetail = ({id, name, description, origen, price, amount, image, category, stock}) => {
 
 const navigate = useNavigate ()
@@ -27,6 +27,12 @@ const sumarAlCarrito = () => {
         counter
     }
     addToCart(newItem)
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra finalizada con éxito',
+        timer: 1000,
+        showComfirmButtom: "false"
+    })
 }
 
     return (

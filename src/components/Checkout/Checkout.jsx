@@ -49,7 +49,7 @@ ordenes.add(orden)
         Swal.fire({
             icon: 'success',
             title: 'Compra finalizada con éxito',
-            text: 'Guarde su número de compra: ${}',
+            text: `Guarde su numero de compra: ${res.id}`,
             willClose: () =>{
                 vaciarCarrito()
             }
