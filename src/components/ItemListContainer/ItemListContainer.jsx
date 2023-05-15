@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { FaSpinner } from "react-icons/fa"
 import "./itemListContainer.css"
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom'
 import { getFirestore } from '../../firebase/config';
+import Spinner from 'react-bootstrap/Spinner';
+
 
 export const ItemListContainer = () => {
     const [items, setItems] = useState([])
@@ -36,13 +37,15 @@ export const ItemListContainer = () => {
     
 return (
     <div className='productos'>
-    {
+      {
         loading
         ?<div className="spinner">
-        <FaSpinner/>
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
         </div>
         :<ItemList productos={items}/>
-    }
+      }
     </div>
     )}
 

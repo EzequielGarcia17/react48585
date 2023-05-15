@@ -41,3 +41,19 @@ text-align: center;
     font-size: 24px;
     transition: 0.5s;
 }
+
+.navLink{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+@media only screen and (max-width: 992px){
+    #navbarScroll{
+        background-color: #64d5c1;
+        width: 100%;
+        position: absolute;
+        top:100px;
+        left: 0px;
+    }
+    
+}

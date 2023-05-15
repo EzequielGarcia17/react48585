@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-
-*{font-family: 'Source Sans Pro', sans-serif;
-}
 
 .item{
-background-color:#ff5f41;
 margin-bottom: 40px;
+border: 0px;
+box-shadow: #64d5c1 0px 0px 4px;
+transition: 0.1s ease-in-out;
+}
+.item:hover{
+    transform: scale(103%);
+    transition: 0.5s ease-in-out;
+    box-shadow: #ff5f41 1px 1px 6px;
 }
 
 .grupo{
-    width:33%;
 }
 
 .card-body{
@@ -18,8 +20,8 @@ margin-bottom: 40px;
 
 .card-title{
     font-family: 'Source Sans Pro', sans-serif;
-    color:#fff;
-    font-size: 30px;
+    color: #ff5f41 !important;;
+    font-size: 2em;
     text-transform: uppercase;
     font-weight: 900;
 }
@@ -34,9 +36,9 @@ margin-bottom: 40px;
 }
 
 .price{
-    font-size: 34px;
-    font-weight: 600;
-    color: #fff;
+    font-size: 2.5em!important;
+    font-weight: 900!important;
+    color: #ff5f41;
 }
 
 .cta {
@@ -50,11 +52,11 @@ margin-bottom: 40px;
 }
 
 .cta:hover {
-    background-color: #fff;
-    color: #ff5f41;
+    background-color: #ff5f41;
+    color: #fff;
 }
 .hero{
-    max-height: 200px;
+    max-height: 300px;
     height: 100%;
     object-fit: cover;
 }

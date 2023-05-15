@@ -38,7 +38,7 @@ function App() {
           <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
       </Router>
-      <footer className="foot">FIN DE LA APP</footer>
+      <footer className="foot"></footer>
     </div>
   </CartProvider>
  // </UiProvider>

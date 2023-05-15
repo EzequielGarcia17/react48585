@@ -5,24 +5,39 @@
 
 .itemdetalle{
 margin-bottom: 40px;
+display: flex;
+flex-direction:row;
+border: 0px;
+padding: 5%;
+
 }
+
+@media only screen and (max-width: 992px){
+    .itemdetalle{
+        flex-direction:column;
+    }
+    .heroDet{
+        width: 100%!important;
+        }
+    .card-body{
+        margin-top: 18px!important;
+        width: 100%!important;
+    }
+}
+
+
 
 .detalle{
     width:100%;
 }
 
-
-.card-body{
-    width: 90%;
+.mainTitle{
+font-size: 4em;
 }
 
-.card-title{
-    font-family: 'Source Sans Pro', sans-serif;
-    color:#fff;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 900;
-}
+
+
+
 
 .card-text{
     font-size: 24px;
@@ -39,8 +54,8 @@ margin-bottom: 40px;
 }
 
 .priceDet{
-    font-size: 34px;
-    font-weight: 600;
+    font-size: 3em;
+    font-weight: 900;
     color: #ff5f41;
 }
 
@@ -65,8 +80,15 @@ margin-bottom: 40px;
     transition: 0.3s;
 }
 .heroDet{
-width: 100%;
+width: 55%;
 height: 30%;
-max-height: 500px;
+min-height: 700px;
 object-fit: cover;
+border-radius: 20px;
+}
+
+.detBody{
+    padding-left: 32px;
+    padding-top: 0px;
+    margin: 0px;
 }

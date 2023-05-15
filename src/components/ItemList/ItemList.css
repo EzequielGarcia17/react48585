@@ -3,12 +3,17 @@
 *{font-family: 'Source Sans Pro', sans-serif;
 }
 
-.itemlist{
+.listaDeProductos{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    justify-content: center;
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+
+
 }
 
 h1{
@@ -16,5 +21,8 @@ h1{
     font-weight: 700;
     display: block;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    font-size: 60px;
+    color: #64d5c1;
+    margin-top: 60px;
 }

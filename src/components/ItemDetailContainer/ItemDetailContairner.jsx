@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { FaSpinner } from "react-icons/fa"
+import Spinner from 'react-bootstrap/Spinner';
 import {ItemDetail} from '../ItemDetail/ItemDetail'
 import { useParams } from "react-router-dom";
 import "./ItemDetailContainer.css"
@@ -33,10 +33,14 @@ export const ItemDetailContainer = () => {
 },[itemId])
 
 return (
-    <section>
+    <section className="productos">
         {
             loading
-            ?<FaSpinner/>
+            ?<div className="spinner">
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+            </div>
             :<ItemDetail {...item}/>
         }
     </section>

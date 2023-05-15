@@ -29,9 +29,10 @@ const sumarAlCarrito = () => {
     addToCart(newItem)
     Swal.fire({
         icon: 'success',
-        title: 'Compra finalizada con éxito',
+        title: 'Agregado al carrito',
         timer: 1000,
-        showComfirmButtom: "false"
+        showComfirmButtom: "false",
+        iconColor: "#64d5c1",
     })
 }
 
@@ -39,8 +40,8 @@ const sumarAlCarrito = () => {
     <div className="detalle">
     <Card className="itemdetalle">
         <Card.Img className="heroDet" variant="top" src={image} />
-        <Card.Body>
-            <Card.Title>{name}</Card.Title>
+        <Card.Body className="detBody">
+            <Card.Title className='mainTitle'>{name}</Card.Title>
             <Card.Text>{description}</Card.Text>
             <p className="subt">Origen: <span className="light">{origen}</span></p>
             <p className="subt">Categoría: <span className="light">{category}</span></p>
