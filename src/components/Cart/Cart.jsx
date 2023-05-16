@@ -29,7 +29,7 @@ export const Cart = () => {
                             <Button className="volver eliminar" onClick={() => removerItem(prod.id)}>Eliminar</Button>
                         </div>
                         <div className="priceBox">
-                            <h4>Precio unitario</h4>
+                            <h4>Precio</h4>
                             <h2 className="prodPrice">${prod.price} {prod.amount}</h2>
                         </div>
                     </div>
