@@ -6,6 +6,9 @@ import "./ItemDetail.css"
 import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { BiCart, BiChevronsLeft } from "react-icons/bi";
+
+
 export const ItemDetail = ({id, name, description, origen, price, amount, image, category, stock}) => {
 
 const navigate = useNavigate ()
@@ -41,15 +44,18 @@ const sumarAlCarrito = () => {
     <Card className="itemdetalle">
         <Card.Img className="heroDet" variant="top" src={image} />
         <Card.Body className="detBody">
+            <Button className="volver" onClick={volverAtras}><BiChevronsLeft/>Volver</Button>
             <Card.Title className='mainTitle'>{name}</Card.Title>
-            <Card.Text>{description}</Card.Text>
+            <Card.Text className="parrafo">{description}</Card.Text>
             <p className="subt">Origen: <span className="light">{origen}</span></p>
-            <p className="subt">Categoría: <span className="light">{category}</span></p>
+            <p className="subt">Stock: <span className="light">{stock}</span></p>
             <Card.Text  className="subt priceDet">${price} {amount}</Card.Text>
             <ItemCount max={stock} min="1" modify={setCounter} cantidad={counter}/>
-            <Button className="compra ctaDet" onClick={sumarAlCarrito}>Agregar al carrito</Button>
-            <Link to="/cart">Ir al carrito</Link> 
-            <Button onClick={volverAtras}>Volver</Button>
+            <Button className="compra ctaDet" onClick={sumarAlCarrito}><BiCart/> Agregar al carrito</Button>
+            <br/>
+            <Link to="/cart">
+                <Button className="volver goCart">Ir al carrito<BiCart/></Button>
+            </Link>
         </Card.Body>
     </Card>
     </div>

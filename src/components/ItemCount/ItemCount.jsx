@@ -16,19 +16,19 @@ export const ItemCount = ({max, cantidad, modify}) => {
         modify ( cantidad -1 )
         }
     }
-    const reset = () =>{
-        modify(0)
-    }
+    // const reset = () =>{
+    //     modify(0)
+    // }
 
 
 return (
     <div>
     <h3>Cantidad</h3>
     <ButtonGroup aria-label="Basic example">
-        <Button variant="secondary" onClick={restar}>-</Button>
-        <Button variant="secondary">{cantidad}</Button>
-        <Button variant="secondary" onClick={sumar}>+</Button>
-        <Button variant="secondary" onClick={reset}>🔄</Button>
+        <Button className="cantidad" variant="secondary" onClick={restar}>-</Button>
+        <Button className="cantidad" variant="secondary">{cantidad}</Button>
+        <Button className="cantidad" variant="secondary" onClick={sumar}>+</Button>
+        {/* <Button variant="secondary" onClick={reset}>🔄</Button> */}
     </ButtonGroup>
     </div>
 )

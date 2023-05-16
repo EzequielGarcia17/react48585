@@ -2,3 +2,68 @@
     width: 100%;
     padding-top: 120px;
 }
+
+.completarDatos{
+    text-align: center;
+    background-color: #d5d5d5;
+    width: 320px;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.completarDatos label{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff5f41;;
+    text-align: left;
+
+}
+
+.completarDatos input{
+    color:#64d5c1;
+    font-weight: 600;
+    margin-bottom: -15px;
+}
+
+.volverCarrito{
+    background-color: #fff;
+    color: #ff5f41;
+    border: 2px solid;
+    font-size: 18px;
+    width: 160px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.volverCarrito:hover{
+    background-color: #fff;
+    border: 2px solid #64d5c1;
+    color: #64d5c1;
+    transition: 0.5s ease-in-out;
+}
+
+.ctaFin{
+    text-align: center;
+    height: 50px;
+    min-width: 180px;
+    background-color: #64d5c1;
+    border: 0;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 700;
+    color:#fff;
+    transition: 0.3s;
+}
+.ctaFin:hover {
+    background-color: #ff5f41;
+    color: #fff;
+    transition: 0.5s;
+}

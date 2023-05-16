@@ -38,7 +38,10 @@ function App() {
           <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
       </Router>
-      <footer className="foot"></footer>
+      <footer className="foot">
+        FRESHI S.A. CUIT: 30-54808315-6 - Paysandú 1842 de la Ciudad Autónoma de Buenos Aires.
+        Correo electrónico de servicio de atención al consumidor: info@freshi.com.ar.
+        Defensa de las y los Consumidores.</footer>
     </div>
   </CartProvider>
  // </UiProvider>

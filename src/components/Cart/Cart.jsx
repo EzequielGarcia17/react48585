@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import "./Cart.css"
 import { CartContext } from '../context/CartContext'
+import { BiCart } from "react-icons/bi";
 
 export const Cart = () => {
 
@@ -12,28 +13,33 @@ export const Cart = () => {
         <div  className='compras'>
         {
             carrito.length ===0
-            ?<>
-                <h3>Carrito Vacio</h3>
-                <Link to='/' className="btn btn-sucess">Volver a comprar</Link>
-                </> 
+            ?<div className="centrar">
+                <h1>Carrito Vacio</h1>
+                <Link to='/'><Button className="volver">Seguir comprando</Button></Link>
+            </div> 
             :<>
-                <h3>Tu carrito</h3>
+                <h1>Tu carrito</h1>
             {
                 carrito.map((prod) => (
-                    <div>
-                        Listado
-                        <p>{prod.name}</p>
-                        <p>${prod.price} {prod.amount}</p>
-                        <p>Cantidad: {prod.counter}</p>
-                        <Button onClick={() => removerItem(prod.id)}>Eliminar</Button>
+                    <div className="lineaCarro">
+                        <img className="chico" alt="producto" src={prod.image}/>
+                        <div className="prodDet">
+                            <h2>{prod.name}</h2>
+                            <h3>Cantidad: {prod.counter}</h3>
+                            <Button className="volver eliminar" onClick={() => removerItem(prod.id)}>Eliminar</Button>
+                        </div>
+                        <div className="priceBox">
+                            <h4>PRECIO UNITARIO</h4>
+                            <h2 className="prodPrice">${prod.price} {prod.amount}</h2>
+                        </div>
                     </div>
                 ))
             }
-            <hr/>
+            <div className="precioTotal">
             <p>PRECIO TOTAL ${precioTotal()}</p>
-            <hr/>
-            <Link to="/checkout" class="btn btn-success">Finalizar Compra</Link>
-            <Button className='btn btn-danger'onClick={vaciarCarrito}>vaciarCarrito</Button>
+            </div>
+            <Link to="/checkout"><Button className="cta">Finalizar Compra</Button></Link>
+            <Button className='borrar'onClick={vaciarCarrito}>Vaciar Carrito<BiCart className='carDel'/></Button>
         </>
     }
     </div>

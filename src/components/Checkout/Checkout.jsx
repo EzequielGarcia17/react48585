@@ -74,39 +74,33 @@ ordenes.add(orden)
 
     return (
         <div className="checkout">
-            <h3>Terminar Compra</h3>
-            <form onSubmit={handleSubmit}>
+            <h1>Terminar Compra</h1>
+            <form className="completarDatos" onSubmit={handleSubmit}>
                 <div class="mb-3">
-                    <label htmlFor="" for="exampleInputEmail1" class="form-label">Email
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => setEmail(e.target.value)} value={email}/>
+                    <label for="exampleInputName1" class="form-label">Nombre
+                        <input type="text" class="form-control" id="exampleInputName1" onChange={(e) => setNombre(e.target.value)} value={nombre}/>
                     </label>
+
                     {/* <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> */}
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Nombre
-                        <input type="text" class="form-control" id="exampleInputPassword1" onChange={(e) => setNombre(e.target.value)} value={nombre}/>
+                    <label for="exampleInputApellido1" class="form-label">Apellido
+                        <input type="text" class="form-control" id="exampleInputApellido1" onChange={(e) => setApellido(e.target.value)} value={apellido}/>
                     </label>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Apellido
-                        <input type="text" class="form-control" id="exampleInputPassword1" onChange={(e) => setApellido(e.target.value)} value={apellido}/>
+                    <label htmlFor="" for="exampleInputEmail1" class="form-label" required>Email
+                        <input type="email" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => setEmail(e.target.value)} value={email}/>
                     </label>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Teléfono
-                        <input type="number" class="form-control" id="exampleInputPassword1" onChange={(e) => setTelefono(e.target.value)} value={telefono}/>
+                    <label for="exampleInputPhone1" class="form-label" required>Teléfono
+                        <input type="number" class="form-control" required id="exampleInputPhone1" onChange={(e) => setTelefono(e.target.value)} value={telefono}/>
                     </label>
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Suscribite para saber de nuestras promociones</label>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
-                </div>
-                <button type="submit" class="btn btn-success">Finalizar</button>
-                <Link to="/cart" class="btn btn-info">Volver al Carrito</Link>
+                <button type="submit" class="ctaFin">FINALIZAR</button>
+                <br/>
+                <Link to="/cart" class="volverCarrito">Volver al Carrito</Link>
             </form>
         </div>
     )

@@ -4,3 +4,180 @@
     padding-bottom: 120px;
     height: 49px;
 }
+.volver{
+    background-color: #fff;
+    color: #ff5f41;
+    border: 2px solid;
+    font-size: 18px;
+    width: 180px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.volver:hover{
+    background-color: #fff;
+    border: 2px solid #64d5c1;
+    color: #64d5c1;
+    transition: 0.5s ease-in-out;
+}
+
+.eliminar{
+    width: 90px;
+    padding-left: 11px;
+}
+
+.centrar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.lineaCarro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: calc(100%-60px);
+    margin: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+    border-bottom: solid 3px #5b5b5b;
+
+}
+
+
+.chico{
+    width: 30%;
+    max-width: 260px;
+    border-radius: 20px;
+    padding-right: 10px;
+}
+
+.prodPrice{
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ff5f41;
+    text-align: right;
+}
+.priceBox{
+    width: 40%;
+}
+
+.priceBox h4{
+    text-align: right;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.prodDet{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: solid 2px #64d5c1;
+    border-left: solid 2px #64d5c1;
+    height:100%;
+    width: 30%;
+}
+
+.prodDet h3{
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.prodDet h2{
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.precioTotal{
+    float: right;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    width: 11em;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: calc(100% - 11em);
+    border-bottom: solid 3px #64d5c1;
+    border-top: solid 3px #64d5c1;
+    padding-top: 15px;
+    color: #64d5c1;
+}
+.cta{
+    height: 50px;
+    min-width: 180px;
+    background-color: #64d5c1;
+    border: 0;
+    border-radius: 8px;
+    font-size: 24px;
+    line-height: 24px;
+    float: right;
+    margin-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 700;
+}
+.cta:hover {
+    background-color: #ff5f41;
+    color: #fff;
+}
+
+.borrar{
+    float: right;
+    height: 50px;
+    min-width: 160px;
+    margin-right: 50px;
+    background-color: #fff;
+    color: #ff5f41;
+    border: 2px solid;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.carDel{
+}
+
+@media only screen and (max-width: 660px){
+    .precioTotal{
+        font-size: 1.8em;
+    }
+    .prodPrice{
+        font-size: 1.5em;
+    }
+    .prodDet{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+    .prodDet h2{
+        font-size: 1em;
+    }
+    .prodDet h3{
+        font-size: 0.75em;
+    }
+    .cta{
+        width: 140px;
+        font-size: 16px;
+        margin-top: 10px
+    }
+    .borrar{
+        min-width: 80px;
+        font-size: 14px;
+        margin-right: 25px;
+        margin-top: 10px;
+    }
+    .volver{
+        font-size: 12px;
+        width: 70px;
+    }
+    .priceBox h4{
+        font-size: 14px;
+    }
+}

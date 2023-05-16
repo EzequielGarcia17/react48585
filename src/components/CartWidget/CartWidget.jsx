@@ -3,7 +3,6 @@ import { BiCart } from "react-icons/bi";
 import { CartContext } from '../context/CartContext';
 import "./CartWidget.css"
 
-
 export const CartWidget = () => {
 
     const {calcularCantidad} = useContext(CartContext)
